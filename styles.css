@@ -57,15 +57,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
-.logo {
+/* .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--gray-900);
     text-decoration: none;
     transition: var(--transition);
+} */
+
+.logo{
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
 }
 
 .logo span {
@@ -74,6 +80,7 @@ body {
 
 .logo:hover {
     transform: scale(1.05);
+    transition: all ease-in 0.25s;
 }
 
 .nav-menu {
@@ -191,6 +198,7 @@ body {
 .btn {
     display: inline-block;
     padding: 0.875rem 2rem;
+    font-family: 'Segoe UI';
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
