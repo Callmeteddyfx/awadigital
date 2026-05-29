@@ -1,0 +1,254 @@
+:root {
+	--header-offset: 96px;
+	--color-accent: #3000b4;
+	--color-black: #000000;
+	--color-white: #ffffff;
+	--color-text: rgba(0, 0, 0, 0.75);
+	--space-3: 0.75rem;
+	--space-4: 1rem;
+	--space-5: 1.25rem;
+	--container: 72rem;
+	--radius-lg: 1.6rem;
+}
+
+/* Portfolio page specific base adjustments */
+body {
+	background: #ffffff;
+	color: var(--color-black);
+	font-family: "Instrument Sans", sans-serif;
+}
+
+.site-header {
+	padding-block: 1rem;
+}
+
+.site-header__inner {
+	background: rgba(255, 255, 255, 0.96);
+	backdrop-filter: blur(8px);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.site-nav__link.is-current {
+	color: var(--color-accent);
+}
+
+.portfolio-page {
+	padding-bottom: 4rem;
+}
+
+.portfolio-hero {
+	padding-top: 1.5rem;
+	padding-bottom: 2rem;
+}
+
+.portfolio-hero__head {
+	max-width: 64rem;
+	margin-inline: auto;
+}
+
+.portfolio-hero__title-row {
+	display: flex;
+	align-items: center;
+	gap: 0.85rem;
+	flex-wrap: wrap;
+}
+
+.portfolio-hero__title {
+	margin: 0;
+	font: 800 clamp(2rem, 3.8vw, 3.2rem)/1 "Manrope", sans-serif;
+	letter-spacing: -0.05em;
+}
+
+.portfolio-socials {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+}
+
+.portfolio-social {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.35rem;
+	height: 1.35rem;
+	color: rgba(0, 0, 0, 0.88);
+	transition: color 180ms ease, transform 180ms ease;
+}
+
+.portfolio-social:hover,
+.portfolio-social:focus-visible {
+	color: var(--color-accent);
+	transform: translateY(-1px);
+}
+
+.portfolio-hero__intro {
+	margin: 0.9rem 0 0;
+	max-width: 58rem;
+	font-size: 1rem;
+	line-height: 1.55;
+	color: rgba(0, 0, 0, 0.78);
+}
+
+.portfolio-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+	max-width: 64rem;
+	margin-inline: auto;
+}
+
+.portfolio-card {
+	display: grid;
+	gap: 0.55rem;
+}
+
+.portfolio-card__link {
+	display: block;
+	border-radius: 1.2rem;
+	overflow: hidden;
+	background: #f1f1f1;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	transition: transform 220ms ease;
+}
+
+.portfolio-card__link:hover .portfolio-card__image,
+.portfolio-card__link:focus-visible .portfolio-card__image {
+	transform: scale(1.02);
+}
+
+.portfolio-card__body {
+	display: grid;
+	gap: 0.15rem;
+}
+
+.portfolio-card__title {
+	margin: 0;
+	font: 800 clamp(1.3rem, 2.4vw, 2rem)/1.05 "Manrope", sans-serif;
+	letter-spacing: -0.04em;
+}
+
+.portfolio-card__category {
+	margin: 0;
+	font-size: 0.85rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 48rem) {
+	.portfolio-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 2rem;
+	}
+
+	.portfolio-hero__intro {
+		font-size: 1.05rem;
+	}
+}
+
+@media (min-width: 64rem) {
+	.portfolio-hero {
+		padding-top: 2rem;
+	}
+
+	.portfolio-grid {
+		margin-top: 2rem;
+	}
+}
+
+/* Project detail specific styles (ReclaimEdu) */
+.project-shell {
+    background: var(--color-white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 1.25rem;
+}
+
+.project-card {
+	background: var(--color-white);
+	color: var(--color-black);
+	padding: 2.25rem;
+	border-radius: 0.75rem;
+	width: 100%;
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2.25rem;
+	align-items: start;
+    justify-self: center;
+}
+
+.project-media img {
+	width: 100%;
+	height: auto;
+	border-radius: 0.9rem;
+	display: block;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.362);
+}
+
+.project-title {
+	margin: 0.85rem 0 0 0;
+	font: 800 clamp(1.6rem, 3.6vw, 2.4rem)/1 "Manrope", sans-serif;
+	letter-spacing: -0.03em;
+}
+
+.project-category {
+	margin-top: 0.2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: rgba(0,0,0,0.7);
+}
+
+.project-info {
+	font-size: 1rem;
+    min-height: 100%;
+    text-align: center;
+    align-content: center;
+}
+
+.project-meta {
+	margin: 0 0 1rem 0;
+	color: rgba(0,0,0,0.88);
+	font-weight: 600;
+}
+
+.project-meta a{
+    color: var(--color-accent);
+}
+
+.project-meta a:hover{
+    transform: scale(1.05);
+    color: var(--color-black);
+    transition: all ease 200ms;
+}
+
+.back-link {
+	display: inline-block;
+	margin-top: 1.5rem;
+	color: var(--color-accent);
+	text-decoration: none;
+	font-weight: 700;
+}
+
+@media (max-width: 48rem) {
+	.project-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.project-card {
+		padding: 1.25rem;
+	}
+}

@@ -484,6 +484,32 @@ a {
   line-height: 1.1;
 }
 
+.team-profile-img{
+    cursor: pointer;
+    aspect-ratio: 1-1;
+    border-radius: 10px;
+    border: var(--color-accent) solid 0.05rem;
+}
+
+.team-profile-img:hover{
+    box-shadow: 0 1px 10px rgba(92, 91, 91, 0.451);
+    transform: scale(1.02);
+    transition: all ease 300ms;
+}
+
+.team-social{
+    margin-top: 0.5rem;
+}
+
+.team-social:hover{
+    color:var(--color-accent);
+    transform: scale(1.02);
+    transition: all ease 200ms;
+}
+
+
+
+
 @media (min-width: 48rem) {
   .site-header__inner {
     padding-inline: var(--space-5);
@@ -608,6 +634,29 @@ a {
   margin: 0;
   font-size: 0.85rem;
   color: rgba(0,0,0,0.6);
+}
+
+.about__portfolio-cta {
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about__portfolio-link {
+  min-width: 100%;
+  text-align: center;
+  color: var(--color-accent);
+  font: 700 1rem/1.2 "Instrument Sans", sans-serif;
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.about__portfolio-link:hover,
+.about__portfolio-link:focus-visible {
+  opacity: 0.8;
+  transform: translateY(-1px);
+  transition: all ease 300ms;
 }
 
 @media (min-width: 48rem) {
