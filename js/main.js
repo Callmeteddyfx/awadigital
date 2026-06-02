@@ -2,7 +2,12 @@ const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = document.querySelectorAll(".site-nav__link");
-const root = document.documentElement;
+const package_dropdown = document.getElementById("contact-form__field");
+const addon_dropdown = document.getElementById("addons");
+
+const message = document.getElementById("contact_message");
+const name = document.getElementById("name");
+const email = document.getElementById("email");
 
 if (header && nav && navToggle) {
   const setHeaderOffset = () => {
@@ -82,4 +87,14 @@ if (faqQuestions.length) {
       setFaqState(isAlreadyOpen ? null : button);
     });
   });
+}
+
+function SelectPackage(btn_id){
+    package_dropdown.value = btn_id;
+    message.value = `Hello awadigital, I would love to purchase the ${btn_id} package.`
+}
+
+function SelectAddon(addon_id){
+    addon_dropdown.value = addon_id;
+    message.value = message.value + ` Hello awadigital, I would love to purchase the ${addon_id} add-on.`
 }
