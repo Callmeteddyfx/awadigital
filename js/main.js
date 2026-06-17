@@ -4,6 +4,7 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = document.querySelectorAll(".site-nav__link");
 const package_dropdown = document.getElementById("contact-form__field");
 const addon_dropdown = document.getElementById("addons");
+const root = document.documentElement;
 
 const message = document.getElementById("contact_message");
 const name = document.getElementById("name");
@@ -86,6 +87,31 @@ if (faqQuestions.length) {
       const isAlreadyOpen = button.getAttribute("aria-expanded") === "true";
       setFaqState(isAlreadyOpen ? null : button);
     });
+  });
+}
+
+const carouselTrack = document.querySelector("[data-carousel-track]");
+const carouselPrev = document.querySelector("[data-carousel-prev]");
+const carouselNext = document.querySelector("[data-carousel-next]");
+
+if (carouselTrack && carouselPrev && carouselNext) {
+  const getScrollAmount = () => {
+    const card = carouselTrack.querySelector(".featured-projects__card");
+    if (!card) {
+      return carouselTrack.clientWidth;
+    }
+
+    const cardWidth = card.getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(carouselTrack).gap || "0") || 0;
+    return cardWidth + gap;
+  };
+
+  carouselPrev.addEventListener("click", () => {
+    carouselTrack.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+  });
+
+  carouselNext.addEventListener("click", () => {
+    carouselTrack.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
   });
 }
 

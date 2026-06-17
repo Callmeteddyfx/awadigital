@@ -63,7 +63,7 @@
 				<p class="hero__text">At <b>awadigital</b> we build fast, Mobile-Friendly, SEO-Optimized websites that help small businesses look professional, attract customers, and grow online. </p>
 
 				<div class="hero__actions">
-					<a class="button button--ghost" href="portfolio.html">View Portfolio</a>
+					<a class="button button--ghost" href="#featured-projects">View Portfolio</a>
 					<a class="button button--primary" href="#contact">Get a Quote</a>
 				</div>
 			</div>
@@ -187,7 +187,7 @@
 										<span>Do you redesign existing websites?</span>
 										<span class="faq-questions__icon" aria-hidden="true">+</span>
 									</button>
-									<p class="faq-item__answer" id="faq-answer-2" data-faq-panel hidden>Yes, redesigns are done.</p>
+									<p class="faq-item__answer" id="faq-answer-2" data-faq-panel hidden>Yes, we redesign already existing websites.</p>
 								</li>
 								<li class="faq-item">
 									<button class="faq-question" type="button" data-faq-question aria-expanded="false" aria-controls="faq-answer-3">
@@ -201,7 +201,7 @@
 										<span>Can I update the website myself?</span>
 										<span class="faq-questions__icon" aria-hidden="true">+</span>
 									</button>
-									<p class="faq-item__answer" id="faq-answer-4" data-faq-panel hidden>Yes, your site can be updated by yourself if WordPress is used.</p>
+									<p class="faq-item__answer" id="faq-answer-4" data-faq-panel hidden>Yes, your site can be updated by yourself if WordPress is used to build it.</p>
 								</li>
 							</ul>
 						</section>
@@ -276,9 +276,62 @@
 						</article>
 					</div>
 
-					<div class="about__portfolio-cta">
-						<a class="about__portfolio-link" href="portfolio.html">Visit Our Portfolio</a>
+					<section class="featured-projects" id="featured-projects" aria-labelledby="featured-projects-title">
+						<div class="featured-projects__header">
+							<h3 class="featured-projects__title" id="featured-projects-title">Featured Projects</h3>
+							<p class="featured-projects__subtitle">A few recent builds that show how we turn strategy into a polished digital presence.</p>
+						</div>
+
+						<div class="featured-projects__carousel">
+							<button class="featured-projects__arrow featured-projects__arrow--left" type="button" data-carousel-prev aria-label="Scroll featured projects left">
+								<span aria-hidden="true">‹</span>
+							</button>
+
+							<div class="featured-projects__track" tabindex="0" aria-label="Featured projects carousel" data-carousel-track>
+							<article class="featured-projects__card">
+								<a 
+								class="featured-projects__link" 
+								href="https://reclaimedu.ca/"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="View ReclaimEdu project">
+									<img src="./assets/portfolio/reclaimedu.png" alt="ReclaimEdu project preview">
+								</a>
+								<div class="featured-projects__body">
+									<h4 class="featured-projects__name">ReclaimEdu</h4>
+									<p class="featured-projects__category">Education</p>
+								</div>
+							</article>
+
+							<article class="featured-projects__card">
+								<a class="featured-projects__link" href="portfolio-projects/fullerfieldsfarm.html" aria-label="View Fuller Fields Farms project">
+									<img src="./assets/portfolio/fullerfieldfarms.png" alt="Fuller Fields Farms project preview">
+								</a>
+								<div class="featured-projects__body">
+									<h4 class="featured-projects__name">Fuller Fields Farms</h4>
+									<p class="featured-projects__category">Agriculture</p>
+								</div>
+							</article>
+
+<!-- 							<article class="featured-projects__card">
+								<a class="featured-projects__link" href="portfolio.html" aria-label="View portfolio page">
+									<img src="./assets/portfolio/awadigital_seo.png" alt="AWA Digital SEO project preview">
+								</a>
+								<div class="featured-projects__body">
+									<h4 class="featured-projects__name">AWA Digital SEO</h4>
+									<p class="featured-projects__category">Marketing</p>
+								</div>
+							</article> -->
+							</div>
+							<button class="featured-projects__arrow featured-projects__arrow--right" type="button" data-carousel-next aria-label="Scroll featured projects right">
+								<span aria-hidden="true">›</span>
+							</button>
+
+				<div class="about__portfolio-cta">
+				<a class="about__portfolio-link" href="portfolio.html">Visit Our Portfolio</a>
+			</div>
 					</div>
+					</section>
 
 			</div>
 		</section>
