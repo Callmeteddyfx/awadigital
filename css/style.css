@@ -1169,7 +1169,7 @@ a {
 }
 
 .contact__value {
-  color: #111111;
+  color: var(--color-accent);
 }
 
 .contact-form {
