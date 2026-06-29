@@ -6,6 +6,10 @@ const package_dropdown = document.getElementById("contact-form__field");
 const addon_dropdown = document.getElementById("addons");
 const root = document.documentElement;
 
+const palenstine_donation = "https://secure.unicef.ca/page/137694/donate/1?ea.tracking.id=23DIEM08GSE&gad_source=1&gad_campaignid=20713687814&gbraid=0AAAAAD5LRQoNOrPFzanZ4IREU8II0Q-AY&gclid=CjwKCAjwuuPRBhAnEiwA2Ji8end4rQ4PVAwQ7mj8YWO7iYh_2PMHQSyxSTxwMqjPluvO5BrWCsnvPhoCL4wQAvD_BwE";
+const sudan_donation = "https://www.rescue.org/article/crisis-sudan-what-happening-and-how-help?form=sudan&ms=ws_explainer_fy26_sudan_mmus_feb&initialms=ws_explainer_fy26_sudan_mmus_feb";
+
+
 const message = document.getElementById("contact_message");
 const name = document.getElementById("name");
 const email = document.getElementById("email");
@@ -123,4 +127,13 @@ function SelectPackage(btn_id){
 function SelectAddon(addon_id){
     addon_dropdown.value = addon_id;
     message.value = message.value + ` Hello awadigital, I would love to purchase the ${addon_id} add-on.`
+}
+
+function VisitDonationSite(state){
+  if (state == "sudan"){
+    window.location.href = sudan_donation;
+  }
+  else if (state == "gaza"){
+    window.location.href = palenstine_donation;
+  }
 }
